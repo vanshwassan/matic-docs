@@ -321,7 +321,9 @@ contract RemixQrngExample is RrpRequesterV0 {
 ```
 
 - The `setRequestParameters()` takes in `airnode` (The ANU/Quintessence/Nodary Airnode address) , `endpointIdUint256`, `sponsorWallet` and sets these parameters. You can get Airnode address and the endpoint ID [here](https://docs.api3.org/reference/qrng/providers.html).
+
 - The `makeRequestUint256()` function calls the `airnodeRrp.makeFullRequest()` function of the `AirnodeRrpV0.sol` protocol contract which adds the request to its storage and returns a `requestId`.
+
 - The targeted off-chain ANU Airnode gathers the request and performs a callback to the requester with the random number.
 
 You can read more about API3 QRNG [here](https://docs.api3.org/explore/qrng/).
